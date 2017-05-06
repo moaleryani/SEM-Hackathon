@@ -19,16 +19,17 @@
       <a class="navbar-brand" href="#">Euro Quiz</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Quiz Time</a></li>
+      <li class="active"><a href="/index.php">Quiz Time</a></li>
       <li><a href="/browse.php">Browse</a></li>
-      <li><a href="#">Random</a></li>
+      <li><a href="/profileview.php">Random</a></li>
     </ul>
   </div>
 </nav>
 
     <div class="well text-center">
-    <div class="col-md-12">Who got the most votes?</div>
-    <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Who got the most votes?</h1>
+            </div>    <div class="row">
         <div class="col-md-6">
             <a href="#"><img src="http://www.eurovisioncovers.co.uk/ui16.jpg" width="400" height="400" alt="imagenotfound.jpg"></a>
         </div>
