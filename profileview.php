@@ -19,26 +19,36 @@
       <a class="navbar-brand" href="#">Euro Quiz</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Quiz Time</a></li>
+      <li><a href="#">Quiz Time</a></li>
       <li><a href="#browse.php">Browse</a></li>
-      <li><a href="#">Random</a></li>
+      <li class="active"><a href="#">Random</a></li>
     </ul>
   </div>
-</nav>
-
+</nav>               
+      
     <div class="well text-center">
     <div class="row">
+        
+        <?php
+// Read JSON file
+$json = file_get_contents('./eurovision-mock-db.json');
+
+//Decode JSON
+$json_data = json_decode($json,true);
+$one_item = $json_data[rand(0, count($json_data) - 1)];
+           
+$one_item_string= json_encode($one_item['PerformerImage']);
+?>     
         <div>
-            <a href="#"><img src="http://www.eurovisioncovers.co.uk/ui16.jpg" width="400" height="400" alt="imagenotfound.jpg"  class="img-circle"></a>
+            <a href="#"><img src=<?php echo $one_item_string; ?> width="400" height="400" alt="imagenotfound.jpg"  class="img-circle"></a>
             
-                    
-        </div>
-        <h3 class="media-heading">Performer Name <small> Country</small></h3>
+  </div>
+        <h3 class="media-heading"><?php echo $one_item['Performer'];  ?><small> <?php echo $one_item['Country'];  ?></small></h3>
         <div> <span><strong>Song: </strong></span>
-                        <span class="label label-info">Name of Song</span></div>
+                        <span class="label label-info"><?php echo $one_item['Song'];  ?></span></div>
            <div> <span><strong>Total Points: </strong></span>
-                        <span class="label label-info">500</span></div>         
-             
+                        <span class="label label-info"><?php echo $one_item['Points'];  ?></span></div>         
+
     </div>
 </div>
 
