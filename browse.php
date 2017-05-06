@@ -65,8 +65,8 @@
                     <img countryName="Austria" id="austria"  class="img-responsive" src="flags/au.png" alt="imagenotfound.jpg">
                 </a>
             </div>
-            <div  countryName="Azerbaijan" id="azerbaijan" class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
+            <div   class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a countryName="Azerbaijan" class="thumbnail" href="#">
                     <img class="img-responsive" src="flags/az.png" alt="imagenotfound.jpg">
                 </a>
             </div>
@@ -77,7 +77,7 @@
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/be.png" alt="imagenotfound.jpg">
+                    <img countryName="Belgium" class="img-responsive" src="flags/be.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -87,32 +87,32 @@
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/bg.png" alt="imagenotfound.jpg">
+                    <img countryName="Bulgaria" class="img-responsive" src="flags/bg.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/cr.png" alt="imagenotfound.jpg">
+                    <img countryName="Croatia" class="img-responsive" src="flags/cr.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/cy.png" alt="imagenotfound.jpg">
+                    <img countryName="Cyprus" class="img-responsive" src="flags/cy.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/cz.png" alt="imagenotfound.jpg">
+                    <img countryName="Czech Republic" class="img-responsive" src="flags/cz.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/de.png" alt="imagenotfound.jpg">
+                    <img countryName="Germany" class="img-responsive" src="flags/de.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/dk.png" alt="imagenotfound.jpg">
+                    <img countryName="Denmark" class="img-responsive" src="flags/dk.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -132,22 +132,22 @@
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/fr.png" alt="imagenotfound.jpg">
+                    <img countryName="France" class="img-responsive" src="flags/fr.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/ge.png" alt="imagenotfound.jpg">
+                    <img countryName="Georgia"  class="img-responsive" src="flags/ge.png" alt="imagenotfound.jpg">
                 </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <div countryName="" class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="flags/gr.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/hu.png" alt="imagenotfound.jpg">
+                    <img countryName="Hungry" class="img-responsive" src="flags/hu.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -157,7 +157,7 @@
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/il.png" alt="imagenotfound.jpg">
+                    <img countryName="Israel" class="img-responsive" src="flags/il.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -167,32 +167,27 @@
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/it.png" alt="imagenotfound.jpg">
+                    <img countryName="Italy" class="img-responsive" src="flags/it.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/it.png" alt="imagenotfound.jpg">
+                    <img countryName="Lithuania" class="img-responsive" src="flags/lt.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/lt.png" alt="imagenotfound.jpg">
+                    <img  class="img-responsive" src="flags/lu.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/lu.png" alt="imagenotfound.jpg">
+                    <img countryName="Latvia" class="img-responsive" src="flags/lv.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/lv.png" alt="imagenotfound.jpg">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/mc.png" alt="imagenotfound.jpg">
+                    <img countryName="" class="img-responsive" src="flags/mc.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -202,22 +197,22 @@
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/mt.png" alt="imagenotfound.jpg">
+                    <img countryName="Malta" class="img-responsive" src="flags/mt.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/pt.png" alt="imagenotfound.jpg">
+                    <img countryName="Portugal" class="img-responsive" src="flags/pt.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/ro.png" alt="imagenotfound.jpg">
+                    <img countryName="Romania" class="img-responsive" src="flags/ro.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/ru.png" alt="imagenotfound.jpg">
+                    <img countryName="Russia" class="img-responsive" src="flags/ru.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -227,7 +222,7 @@
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/si.png" alt="imagenotfound.jpg">
+                    <img countryName="Serbia" class="img-responsive" src="flags/si.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -237,7 +232,7 @@
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/sm.png" alt="imagenotfound.jpg">
+                    <img  class="img-responsive" src="flags/sm.png" alt="imagenotfound.jpg">
                 </a>
             </div>
 

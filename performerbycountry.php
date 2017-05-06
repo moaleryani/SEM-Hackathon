@@ -33,7 +33,7 @@
             rawFile.send(null);
         }
 
-        readTextFile("/eurovision-mock-db.json", function(text){
+        readTextFile("./eurovision-mock-db.json", function(text){
             var data = JSON.parse(text);
             var performerName, performerPic, performerPoints;
             console.log(data);
