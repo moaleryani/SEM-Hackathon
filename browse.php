@@ -21,7 +21,7 @@
 
 <nav class="navbar navbar-default">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Euro Quiz</a>
+      <a id="brand" class="navbar-brand" href="#">Euro Quiz</a>
     </div>
     <ul class="nav navbar-nav">
       <li><a href="/index.php">Quiz Time</a></li>
@@ -42,30 +42,30 @@
 
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/ad.png" alt="imagenotfound.jpg">
+                    <img countryName="Albania" id="albania" class="img-responsive" src="flags/ad.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/al.png" alt="imagenotfound.jpg">
+                    <img countryName="Andorra" id="andorra" class="img-responsive" src="flags/al.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/am.png" alt="imagenotfound.jpg">
+                    <img countryName="Armenia" id="armenia" class="img-responsive" src="flags/am.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/at.png" alt="imagenotfound.jpg">
+                    <img countryName="Australia" id="australia" class="img-responsive" src="flags/at.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/au.png" alt="imagenotfound.jpg">
+                    <img countryName="Austria" id="austria"  class="img-responsive" src="flags/au.png" alt="imagenotfound.jpg">
                 </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <div  countryName="Azerbaijan" id="azerbaijan" class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="flags/az.png" alt="imagenotfound.jpg">
                 </a>
@@ -222,7 +222,7 @@
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="flags/se.png" alt="imagenotfound.jpg">
+                    <img countryName="Sweden" id="sweden" class="img-responsive" src="flags/se.png" alt="imagenotfound.jpg">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -243,7 +243,15 @@
 
         </div>
         </div>
+        
 
+    <script type="text/javascript"> 
+        $('img').click(function() {
+            var countryName = $(this).attr('countryName');
+            window.location.href = "performerbycountry.php?countryName=" + countryName;
+        });
+
+    </script>
 </body>
 </html>
 
