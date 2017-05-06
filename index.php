@@ -20,7 +20,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Quiz Time</a></li>
-      <li><a href="#browse.php">Browse</a></li>
+      <li><a href="/browse.php">Browse</a></li>
       <li><a href="#">Random</a></li>
     </ul>
   </div>
