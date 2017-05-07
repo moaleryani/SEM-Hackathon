@@ -7,8 +7,35 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
+    
+              <!-- Material Design fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+        
+          <!-- Bootstrap Material Design -->
+        <link href="css/bootstrap-material-design.css" rel="stylesheet">
+        <link href="css/ripples.min.css" rel="stylesheet">
+    
+    
+  <style>
+      
+                  .navbar {
+                margin-bottom: 0;
+            }
+            .alert{
+                margin: 50px;
+                width: 400px;
+                align-items: center;
+                margin: auto;
+                color: #009688;
+            }
+      
+            .song{
+          background-color: #009688;
+          color: white;
+      }
+      
   </style>
 </head>
 <body>
@@ -44,10 +71,10 @@ $one_item_string= json_encode($one_item['PerformerImage']);
             
   </div>
         <h3 class="media-heading"><?php echo $one_item['Performer'];  ?><small> <?php echo $one_item['Country'];  ?></small></h3>
-        <div> <span><strong>Song: </strong></span>
-                        <span class="label label-info"><?php echo $one_item['Song'];  ?></span></div>
-           <div> <span><strong>Total Points: </strong></span>
-                        <span class="label label-info"><?php echo $one_item['Points'];  ?></span></div>         
+        <div class="alert song text-center"> <span><strong>Song: </strong></span>
+                        <span ><?php echo $one_item['Song'];  ?></span></div>
+           <div class="alert "> <span><strong>Total Points: </strong></span>
+                        <span><?php echo $one_item['Points'];  ?></span></div>         
 
     </div>
 </div>

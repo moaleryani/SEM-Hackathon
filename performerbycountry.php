@@ -9,12 +9,39 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="eurovision-mock-db.json"></script>
     
+              <!-- Material Design fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        
+          <!-- Bootstrap Material Design -->
+        <link href="css/bootstrap-material-design.css" rel="stylesheet">
+        <link href="css/ripples.min.css" rel="stylesheet">
+    
   <style>
+      
+                  .navbar {
+                margin-bottom: 0;
+            }
       .thumbnail img {
           height:200px; 
           width: 400px;
           overflow: auto;
           text-align: center;
+      }
+      
+                  .alert{
+                margin-bottom: 50px;
+                width: 400px;
+                background-position: center;
+                margin: auto;
+                color: #009688;
+
+            }
+      
+      .song{
+          background-color: #009688;
+          color: white;
       }
       
   </style>
@@ -72,17 +99,17 @@
     </ul>
 </nav>
 
-    <div class="well text-center">
+    <div class="well text-center" align="center">
     <!-- Page Content -->
         <div>
             <img class="profilepic img-circle" src="imagenotfound.jpg" width="400" height="400" >
             
   </div>
         <h3 class="media-heading" id="performername">NAME HERE<small>COUNTRY HERE</small></h3>
-        <div> <span><strong>Song: </strong></span>
-                        <span class="label label-info" id="songname"></span></div>
-           <div> <span><strong>Total Points: </strong></span>
-                        <span class="label label-info" id="points">POINTS HERE</span></div>         
+        <div class="alert text-center song" align="justify"> <span><strong>Song: </strong></span>
+                        <span id="songname"></span></div>
+           <div class="alert text-center" align="justify"> <span><strong>Total Points: </strong></span>
+                        <span id="points">POINTS HERE</span></div>         
 
     </div>
 

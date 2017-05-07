@@ -7,7 +7,20 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+              <!-- Material Design fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        
+          <!-- Bootstrap Material Design -->
+        <link href="css/bootstrap-material-design.css" rel="stylesheet">
+        <link href="css/ripples.min.css" rel="stylesheet">
+    
   <style>
+                  .navbar {
+                margin-bottom: 0px;
+            }
       .thumbnail img {
           height:200px; 
           width: 400px;
@@ -24,9 +37,9 @@
       <a id="brand" class="navbar-brand" href="#">Euro Quiz</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="/index.php">Quiz Time</a></li>
-      <li class="active"><a href="browse.php">Browse</a></li>
-      <li><a href="/profileview.php">Random</a></li>
+      <li><a href="./index.php">Quiz Time</a></li>
+      <li class="active"><a href="./browse.php">Browse</a></li>
+      <li><a href="./profileview.php">Random</a></li>
     </ul>
 </nav>
 

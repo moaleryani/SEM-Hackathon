@@ -8,6 +8,16 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
+          <!-- Material Design fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        
+          <!-- Bootstrap Material Design -->
+        <link href="css/bootstrap-material-design.css" rel="stylesheet">
+        <link href="css/ripples.min.css" rel="stylesheet">
+
+        
         <style>
             .navbar {
                 margin-bottom: 0;
@@ -16,6 +26,24 @@
                 margin: 20;
             }
 
+            .jumbotron{
+                padding: 0;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+            
+            .alert{
+                margin: 50px;
+                background-color: #009688;
+            }
+            
+            .instruction{
+                color: #009688;
+            }
+            
+            .media-heading {
+            }
+            
         </style>
         
         <script>
@@ -79,10 +107,11 @@
         </nav>
 
         <div class="well text-center">
-            <div class="col-lg-12">
-                <h1 id="cookietime">Welcome!</h1>
-                <h2 id="Changethis"class="page-header">Who got the most votes? (Choose by clicking the picture.)</h2>
+            <div class="jumbotron col-lg-12">
+                <h1 class="text-primary" id="cookietime">Welcome!</h1>
+                <h2 id="Changethis"class="page-header text-success instruction">Who got the most votes? (Choose by clicking the picture.)</h2>
             </div>    
+            
             
         <div class="row">
 
@@ -93,8 +122,9 @@
 
                 
                 
-                <div> <span><strong>Song: </strong></span>
-                    <span class="label label-info" id="songperformed1">Song Performed</span></div>
+                <div class="alert song"> 
+                    <span><strong>Song: </strong></span>
+                    <span id="songperformed1">Song Performed</span></div>
                 </div>
             
             <div class="col-md-6">
@@ -102,15 +132,16 @@
             
                 <img id="secondEntry" src="imagenotfound.jpg" width="400" height="400" alt="./imagenotfound.jpg"  class="img-circle">
                 
-            <div> <span id="songname"><strong>Song: </strong></span>
-                <span class="label label-info" id="songperformed2">Song Performed</span>
+            <div class="alert"> 
+                <span id="songname"><strong>Song: </strong></span>
+                <span id="songperformed2">Song Performed</span>
             </div>
                 
 
             </div>
         </div>
             <h3 id="scoreboard">Your score will be displayed here...</h3>
-            <button class="btn btn-primary btn-lg" id="next" onclick="nextFunction()">Next Question</button>
+            <button class="btn btn-primary btn-lg btn-raised" id="next" onclick="nextFunction()">Next Question</button>
         </div>
     
         <script>
@@ -128,7 +159,7 @@
             $.ajax({
                 'async': false,
                 'global': true,
-                'url': "/eurovision-mock-db.json",
+                'url': "./eurovision-mock-db.json",
                 'dataType': "json",
                 'success': function (data) {
                     json = data;
