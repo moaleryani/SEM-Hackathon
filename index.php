@@ -44,6 +44,11 @@
             .media-heading {
             }
             
+            .img-circle:hover {
+                background-color: yellow;
+                opacity: 0.5;
+            }
+            
         </style>
         
         <script>
@@ -76,14 +81,14 @@
             var user=getCookie("username");
             var totalScore = getCookie("score");
             if (user != "") {
-                document.getElementById('cookietime').innerHTML = "Sup " + user + "!";
+                document.getElementById('cookietime').innerHTML = "Hello, " + user + "!";
             } else {
                user = prompt("Please enter your name:","");
                if (user != "" && user != null) {
                    setCookie("username", user, 30);
                    setCookie4Scores("score", 0);
                    username=user;
-                document.getElementById('cookietime').innerHTML = "Sup " + user + "!";
+                document.getElementById('cookietime').innerHTML = "Hello, " + user + "!";
                }
             }
         }
@@ -131,7 +136,6 @@
             <h1 class="media-heading" id="performerfromcountry2">Perfrom from Country</h1> 
             
                 <img id="secondEntry" src="imagenotfound.jpg" width="400" height="400" alt="./imagenotfound.jpg"  class="img-circle">
-                
             <div class="alert"> 
                 <span id="songname"><strong>Song: </strong></span>
                 <span id="songperformed2">Song Performed</span>
@@ -172,9 +176,8 @@
         function getObjectByIndex(index){
             return json[index];
         }
-        
+
         var score = 0;
-        var answer;
         function setTwoPerformers(){
             var entry1 = json[Math.floor(Math.random()*json.length)];
             var entry2 = json[Math.floor(Math.random()*json.length)];
@@ -196,61 +199,59 @@
             image1.src = entry1.PerformerImage;
             var image2 = document.getElementById('secondEntry');
             image2.src = entry2.PerformerImage;
-
-            if (entry1.Points > entry2.Points){
-                answer = true;
-            } else {
+            
+            var answer = true;
+            if (performerPoints1 < performerPoints2){
                 answer = false;
+            } else {
+                answer = true;
             }
+            
             document.getElementById('next').style.visibility = 'hidden';
+            
             document.getElementById('firstEntry').addEventListener('click', function(){
-                if (entry1.Points > entry2.Points){
-                    score+=10;
-                } else {
-                    score-=10;
+                if (answer){
+                    document.getElementById('scoreboard').innerHTML = "Your were right!";
+                } else if (!answer){
+                    document.getElementById('scoreboard').innerHTML = "Your were wrong.";
                 }
                 document.getElementById('firstEntry').style.pointerEvents = 'none';
                 document.getElementById('secondEntry').style.pointerEvents = 'none';
                 document.getElementById('performerfromcountry1').innerHTML = entry1.Performer + " got " + entry1.Points + " points.";
                 document.getElementById('performerfromcountry2').innerHTML = entry2.Performer + " got " + entry2.Points + " points.";
-                document.getElementById('scoreboard').innerHTML = "Your Current Score is: " + score;
                 document.getElementById('next').style.visibility = 'visible';
 
             });
             
             document.getElementById('secondEntry').addEventListener('click', function(){
-                if (entry2.Points > entry1.Points){
-                    score+=10;
-                } else {
-                    score-=10;
+                if (!answer){
+                    document.getElementById('scoreboard').innerHTML = "Your were right!";
+                } else  if (answer){
+                    document.getElementById('scoreboard').innerHTML = "Your were wrong.";
                 }
                 document.getElementById('firstEntry').style.pointerEvents = 'none';
                 document.getElementById('secondEntry').style.pointerEvents = 'none';
                 document.getElementById('performerfromcountry1').innerHTML = entry1.Performer + " got " + entry1.Points + " points.";
                 document.getElementById('performerfromcountry2').innerHTML = entry2.Performer + " got " + entry2.Points + " points.";
-                document.getElementById('scoreboard').innerHTML = "Your Current Score is: " + score;
                 document.getElementById('next').style.visibility = 'visible';
             });
             
             $('.firstEntry').attr('src', entry1.PerformerImage);
             $('.secondEntry').attr('src', entry2.PerformerImage);
             
-            console.log("THE SCORE IS: ", score);
+            return ;
         }
         
         function nextFunction() {
-            setTwoPerformers();
             document.getElementById('firstEntry').style.pointerEvents = 'auto';
             document.getElementById('secondEntry').style.pointerEvents = 'auto';
             document.getElementById('Changethis').innerHTML = "Who got the most votes?";
-
+            setTwoPerformers();
         }   
         
         setTwoPerformers();
             
     </script>
-
-        
         
     </body>
 </html>
