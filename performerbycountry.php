@@ -75,7 +75,7 @@
     <div class="well text-center">
     <!-- Page Content -->
         <div>
-            <a href="#"><img class="profilepic" src="imagenotfound.jpg" width="400" height="400"  class="img-circle"></a>
+            <img class="profilepic img-circle" src="imagenotfound.jpg" width="400" height="400" >
             
   </div>
         <h3 class="media-heading" id="performername">NAME HERE<small>COUNTRY HERE</small></h3>

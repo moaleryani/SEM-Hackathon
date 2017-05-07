@@ -15,6 +15,7 @@
             .songname {
                 margin: 20;
             }
+
         </style>
         
         <script>
@@ -26,8 +27,6 @@
         function setCookie4Scores(cname, cvalue){
             document.cookie = cname + "=" + cvalue;
         }    
-        
-        console.log("lakdsgjf", getCookie("score"));
             
         function getCookie(cname) {
             var name = cname + "=";
@@ -54,7 +53,7 @@
                user = prompt("Please enter your name:","");
                if (user != "" && user != null) {
                    setCookie("username", user, 30);
-                   setCookie4Scores("score", totalScore);
+                   setCookie4Scores("score", 0);
                    username=user;
                 document.getElementById('cookietime').innerHTML = "Sup " + user + "!";
                }
@@ -89,8 +88,10 @@
 
             <div class="col-md-6">
                 <h1 class="media-heading" id="performerfromcountry1">Perfrom from Country</h1>   
-                
+                    
                     <img id="firstEntry" src="imagenotfound.jpg" width="400" height="400" alt="./imagenotfound.jpg"  class="img-circle">
+
+                
                 
                 <div> <span><strong>Song: </strong></span>
                     <span class="label label-info" id="songperformed1">Song Performed</span></div>
@@ -109,10 +110,18 @@
             </div>
         </div>
             <h3 id="scoreboard">Your score will be displayed here...</h3>
+            <button class="btn btn-primary btn-lg" id="next" onclick="nextFunction()">Next Question</button>
         </div>
-        
+    
         <script>
 
+        function getCookieByName(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length == 2) return parts.pop().split(";").shift();
+            concole.log("COOKIE PARTS", parts);
+        }
+    
         //converting json file to global variable
         var json = (function() {
             var json = null;
@@ -127,15 +136,12 @@
             });
             return json;
         })();
-            
-        //console.log(json);
-         
+                     
         //get json object by index    
         function getObjectByIndex(index){
             return json[index];
         }
         
-        //console.log("Testing getObjectByIndex: " , getObjectByIndex(5));
         var score = 0;
         var answer;
         function setTwoPerformers(){
@@ -144,11 +150,9 @@
             while (entry1==entry2){
                 entry2 = json[Math.floor(Math.random()*json.length)];
             }            
-            //console.log("First Entry: ", entry1);
-            //console.log("First Entry Performer: ", entry1.Performer);
             performerName1 = entry1.Performer;
             performerPoints1 = entry1.Points;
-            //console.log("Second Entry: ", entry2);
+
             performerName2 = entry2.Performer;
             performerPoints2 = entry2.Points;
             
@@ -167,91 +171,50 @@
             } else {
                 answer = false;
             }
-            console.log("The Answer Is: ", answer);
+            document.getElementById('next').style.visibility = 'hidden';
             document.getElementById('firstEntry').addEventListener('click', function(){
                 if (entry1.Points > entry2.Points){
                     score+=10;
-                    document.getElementById('scoreboard').innerHTML = "Your Current Score is: " + score;
-                    setTwoPerformers();
                 } else {
                     score-=10;
-                    setTwoPerformers();
-                    document.getElementById('scoreboard').innerHTML = "Your Current Score is: " + score;
                 }
+                document.getElementById('firstEntry').style.pointerEvents = 'none';
+                document.getElementById('secondEntry').style.pointerEvents = 'none';
+                document.getElementById('performerfromcountry1').innerHTML = entry1.Performer + " got " + entry1.Points + " points.";
+                document.getElementById('performerfromcountry2').innerHTML = entry2.Performer + " got " + entry2.Points + " points.";
+                document.getElementById('scoreboard').innerHTML = "Your Current Score is: " + score;
+                document.getElementById('next').style.visibility = 'visible';
+
             });
             
             document.getElementById('secondEntry').addEventListener('click', function(){
                 if (entry2.Points > entry1.Points){
                     score+=10;
-                    setTwoPerformers();
-                    document.getElementById('scoreboard').innerHTML = "Your Current Score is: " + score;
                 } else {
                     score-=10;
-                    setTwoPerformers();
-                    document.getElementById('scoreboard').innerHTML = "Your Current Score is: " + score;
-
                 }
+                document.getElementById('firstEntry').style.pointerEvents = 'none';
+                document.getElementById('secondEntry').style.pointerEvents = 'none';
+                document.getElementById('performerfromcountry1').innerHTML = entry1.Performer + " got " + entry1.Points + " points.";
+                document.getElementById('performerfromcountry2').innerHTML = entry2.Performer + " got " + entry2.Points + " points.";
+                document.getElementById('scoreboard').innerHTML = "Your Current Score is: " + score;
+                document.getElementById('next').style.visibility = 'visible';
             });
             
             $('.firstEntry').attr('src', entry1.PerformerImage);
             $('.secondEntry').attr('src', entry2.PerformerImage);
             
-            
             console.log("THE SCORE IS: ", score);
-            console.log("Get Cookie: ", getCookie(username));
         }
         
-            
-        /*function clickedFirst(){
-            if (answer){
-                setCookie(username, score+=10);
-            } else {
-                setCookie(username, score-=10);
-            }
-        }    
+        function nextFunction() {
+            setTwoPerformers();
+            document.getElementById('firstEntry').style.pointerEvents = 'auto';
+            document.getElementById('secondEntry').style.pointerEvents = 'auto';
+            document.getElementById('Changethis').innerHTML = "Who got the most votes?";
+
+        }   
         
-        function clickedSecond(){
-            if (!answer){
-                setCookie(username, score+=10);
-            } else {
-                setCookie(username, score-=10);
-            }
-        }*/  
-            
-        /*function getImageBySrc(_src){
-            //document.getElementById("firstEntry").value=src;
-            alert(_src);
-            for(var i = 0; i < json.length; i++){
-                if(json[i].PerformerPicture == _src);
-            }
-        }*/
-                        
-        function game(){
-            var counter = 0;
-                //setTwoPerformers();
-                //document.getElementById('secondEntry').addEventListener('click', clickedFirst());
-                //document.getElementById('secondEntry').addEventListener('click', clickedSecond());
-
-        }
-            
-        /* function myFunction(performer1, performer2) {                    
-            if ( parseInt(performer1) > parseInt(performer2)){
-                setCookie(score+=10);
-                document.getElementById("Changethis").innerHTML = 'You have answered correctly, you current score is: ' + getCookie();
-                document.getElementById('button').style.display = 'none';
-                document.getElementById('button1').style.display = 'none';
-                document.getElementById('Changethis').style.color='#00ff00';
-            }
-            else{
-                setCookie(score-=10);
-                document.getElementById("Changethis").innerHTML = 'Wrong Answer, you current score is: ' + getCookie();
-                document.getElementById('button').style.display = 'none';
-                document.getElementById('button1').style.display = 'none';
-                document.getElementById('Changethis').style.color='#ff0000 ';
-
-            }
-        }*/
-
         setTwoPerformers();
             
     </script>
