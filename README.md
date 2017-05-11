@@ -8,4 +8,4 @@ A demonstration video can be found [Here](https://www.youtube.com/watch?v=7ItLE5
 
 ![Alt text](/presentation/euroquiz.png?raw=true "Slide Presentation")
 
-###### Please not that EuroQuiz is not hosted anywhere yet as it is still underdevelopment. If you wish to access it, please download the source code and run it locally.
+###### Please note that EuroQuiz is not hosted anywhere yet as it is still underdevelopment. If you wish to access it, please download the source code and run it locally :computer: .
