@@ -46,9 +46,9 @@
       <a class="navbar-brand" href="#">Euro Quiz</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="/index.php">Quiz Time</a></li>
-      <li><a href="/browse.php">Browse</a></li>
-      <li class="active"><a href="/profileview.php">Random</a></li>
+      <li><a href="./index.php">Quiz Time</a></li>
+      <li><a href="./browse.php">Browse</a></li>
+      <li class="active"><a href="./profileview.php">Random</a></li>
     </ul>
   </div>
 </nav>               

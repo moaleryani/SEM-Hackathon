@@ -96,7 +96,7 @@
         </script>
         
     </head>
-    <body  onload="checkCookie()">
+    <body onload="checkCookie()">
 
         <nav class="navbar navbar-default">
             <div class="container-fluid">
@@ -250,7 +250,6 @@
         }   
         
         setTwoPerformers();
-            
     </script>
         
     </body>
